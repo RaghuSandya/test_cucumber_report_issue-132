@@ -1,0 +1,2 @@
+default: -p dev
+dev: -r features/support/env.rb -r features/support -r features/step_definitions features locales=en_US RAILS_ENV=development -f json --out output.json -f pretty
