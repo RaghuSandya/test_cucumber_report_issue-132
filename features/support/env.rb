@@ -9,8 +9,6 @@ require "capybara/rails"
 require 'database_cleaner'
 require 'database_cleaner/cucumber'
 require "selenium-webdriver"
-require 'capybara-screenshot'
-require 'capybara-screenshot/cucumber'
 
 Capybara.default_selector = :css
 
@@ -69,6 +67,6 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 Capybara.configure do |config|
   config.run_server = false
   config.default_wait_time = 60
-  config.default_driver = :webkit
-  config.javascript_driver = :webkit
+  config.default_driver = :selenium
+  config.javascript_driver = :selenium
 end
